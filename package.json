@@ -1,0 +1,34 @@
+{
+  "name": "20-api-message",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Api Message for Twilio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "Api",
+    "Message",
+    "Twilio"
+  ],
+  "author": "Guillermo Torrez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.20.2",
+    "chai": "^5.1.1",
+    "express": "4.19.2",
+    "mocha": "^10.4.0",
+    "mongoose": "8.4.0",
+    "sinon": "^18.0.0",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "twilio": "5.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
