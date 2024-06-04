@@ -23,7 +23,7 @@ export const notFound = (req, res, next) => {
       <body>
           <div class="container">
               <h1>404 Page Not Found</h1>
-              <p>Sorry, the page you requested could not be found.</p>
+              <p>Sorry, the page you requested could not be found.--</p>
           </div>
       </body>
       </html>
