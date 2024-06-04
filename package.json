@@ -3,11 +3,11 @@
   "type": "module",
   "version": "1.0.0",
   "description": "Api Message for Twilio",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "dev": "node --watch ./api/index.js",
-    "test": "mocha --require @babel/register ./api/tests/*.js",
-    "build": "node ./api/index.js --output public"
+    "dev": "node --watch api/index.js",
+    "test": "mocha --require @babel/register api/tests/*.js",
+    "build": "node api/index.js --output public"
   },
   "keywords": [
     "express",
