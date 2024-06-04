@@ -9,7 +9,7 @@ import { notFound, errorHandler } from './middleware/errorHandler.js';
 const app = express();
 app.disable('x-powered-by')
 
-const port = process.env.PORT || 1234;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI, {
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Could not connect to MongoDB', err));
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/api/messages', messageRoutes);
 

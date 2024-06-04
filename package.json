@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --watch ./api/index.js",
-    "test": "mocha --require @babel/register api/tests/*.js",
+    "test": "mocha --require @babel/register ./api/tests/*.js",
     "build": "node ./api/index.js --output public"
   },
   "keywords": [
