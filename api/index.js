@@ -23,9 +23,6 @@ app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/api/messages', messageRoutes);
 
-app.use('/api', swaggerUi.serve);
-app.get('/api', swaggerUi.setup(swaggerDocument));
-
 app.use(notFound);
 app.use(errorHandler);
 
