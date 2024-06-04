@@ -19,12 +19,12 @@ mongoose.connect(process.env.MONGODB_URI, {
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Could not connect to MongoDB', err));
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/api/messages', messageRoutes);
 
-app.use('/', swaggerUi.serve);
-app.get('/', swaggerUi.setup(swaggerDocument));
+app.use('/api', swaggerUi.serve);
+app.get('/api', swaggerUi.setup(swaggerDocument));
 
 app.use(notFound);
 app.use(errorHandler);
