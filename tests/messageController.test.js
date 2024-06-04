@@ -9,7 +9,7 @@ describe('Message Controller', () => {
     it('should send and save a message', async () => {
       const req = {
         body: {
-          to: '+1234567890',
+          to: '14374849824',
           body: 'Hello World',
         },
       };
@@ -21,7 +21,7 @@ describe('Message Controller', () => {
       sinon.stub(twilioService, 'sendTwilioMessage').resolves({
         body: 'Hello World',
         from: process.env.TWILIO_PHONE_NUMBER,
-        to: '+1234567890',
+        to: '14374849824',
       });
       sinon.stub(Message.prototype, 'save').resolves();
 
@@ -40,7 +40,7 @@ describe('Message Controller', () => {
       const req = {
         body: {
           Body: 'Hi there',
-          From: '+1234567890',
+          From: '14374849824',
           To: process.env.TWILIO_PHONE_NUMBER,
         },
       };
