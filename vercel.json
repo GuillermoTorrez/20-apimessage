@@ -3,10 +3,6 @@
       {
         "source": "/",
         "destination": "/api"
-      },
-      {
-        "source": "/api/(.*)",
-        "destination": "/api"
       }
     ],
     "builds": [
