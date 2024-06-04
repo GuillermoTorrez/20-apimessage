@@ -8,7 +8,7 @@
     "builds": [
       {
         "src": "/api/api.js",
-        "use": "@now/node"
+        "use": "@vercel/node"
       }
     ]
   }
