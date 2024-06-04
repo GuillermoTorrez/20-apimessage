@@ -5,9 +5,9 @@
   "description": "Api Message for Twilio",
   "main": "index.js",
   "scripts": {
-    "dev": "node --watch index.js",
+    "dev": "node --watch src/api.js",
     "test": "mocha --require @babel/register tests/*.js",
-    "build": "pnpm install"
+    "build": "node api/api.js --output public"
   },
   "keywords": [
     "express",

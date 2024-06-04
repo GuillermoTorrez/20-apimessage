@@ -1,8 +1,7 @@
 import express from 'express';
-
 import mongoose from 'mongoose';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './swagger.js';
+import swaggerDocument from '../swagger.js';
 import messageRoutes from './routes/messageRoutes.js';
 import { notFound, errorHandler } from './middleware/errorHandler.js';
 
@@ -24,8 +23,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/api/messages', messageRoutes);
 
-app.use('/', swaggerUi.serve);
-app.get('/', swaggerUi.setup(swaggerDocument));
+app.use('/api', swaggerUi.serve);
+app.get('/api', swaggerUi.setup(swaggerDocument));
 
 app.use(notFound);
 app.use(errorHandler);
