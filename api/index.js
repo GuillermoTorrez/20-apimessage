@@ -21,7 +21,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // Update api routes
 
-app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use('/api/messages', messageRoutes);
 
