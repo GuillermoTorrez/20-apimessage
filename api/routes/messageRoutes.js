@@ -5,7 +5,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /messages:
+ * /api/messages/send:
  *   post:
  *     summary: Send a message
  *     description: Send a message using Twilio API and save it to the database.
@@ -32,7 +32,7 @@ router.post('/send', sendMessage);
 
 /**
  * @swagger
- * /messages/receive:
+ * /api/messages/receive:
  *   post:
  *     summary: Receive a message
  *     description: Receive a message from Twilio webhook and respond.

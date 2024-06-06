@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node --watch api/index.js",
     "test": "mocha --require @babel/register api/tests/*.js",
-    "build": "node api/index.js --output public"
+    "build": "node api/index.js --output dist"
   },
   "keywords": [
     "express",
@@ -27,7 +27,8 @@
     "sinon": "^18.0.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
-    "twilio": "5.1.0"
+    "twilio": "5.1.0",
+    "swagger-ui-dist": "^5.17.14"
   },
   "devDependencies": {
     "@babel/register": "^7.24.6",

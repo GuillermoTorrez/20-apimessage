@@ -11,9 +11,12 @@ export const sendMessage = async (req, res) => {
       to: message.to,
     });
     await newMessage.save();
+
     res.status(200).send('Message sent and saved');
+
   } catch (error) {
     res.status(500).send(error.toString());
+    console.log(error.toString())
   }
 };
 
@@ -30,5 +33,6 @@ export const receiveMessage = async (req, res) => {
     res.status(200).send('<Response></Response>');
   } catch (error) {
     res.status(500).send(error.toString());
+    console.log(error.toString())
   }
 };
